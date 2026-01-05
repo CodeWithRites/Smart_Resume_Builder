@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #eef3ff, #ffffff);
+    color: #0f172a;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 50px;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(14px);
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.navbar nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg,#6366f1,#22d3ee);
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white !important;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    padding: 80px 80px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg,#6366f1,#22d3ee);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    margin: 20px 0 30px;
+    font-size: 18px;
+    color: #475569;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg,#6366f1,#22d3ee);
+    padding: 14px 28px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.secondary-btn {
+    border: 1px solid #c7d2fe;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #334155;
+}
+
+/* GLASS MOCK */
+.hero-glass {
+    display: flex;
+    justify-content: center;
+}
+
+.mock-card {
+    width: 320px;
+    height: 420px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* FEATURES */
+.features {
+    padding: 80px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 24px;
+}
+
+.feature-card {
+    padding: 28px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+/* TEMPLATES */
+.templates {
+    padding: 80px;
+    text-align: center;
+}
+
+.template-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.template-card {
+    width: 220px;
+    height: 300px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classic { background: linear-gradient(#e0e7ff,#ffffff); }
+.modern { background: linear-gradient(#22d3ee,#6366f1); color:white; }
+.dark { background: linear-gradient(#020617,#1e293b); color:white; }
+
+/* CTA */
+.cta {
+    padding: 80px;
+    background: linear-gradient(135deg,#6366f1,#22d3ee);
+    color: white;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+}
+/* HERO MOCK CARD */
+.mock-card {
+    width: 320px;
+    height: 420px;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(20px);
+    border-radius: 22px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* RESUME IMAGE */
+.mock-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECT (TRENDING) */
+.mock-card:hover img {
+    transform: scale(1.05);
+}
+.hero-glass {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    70% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
