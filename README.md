@@ -51,6 +51,12 @@ Smart Resume Builder is a web-based resume creation tool designed for students a
   
 
 ---
+## 👨‍💻 Author
+Ritesh Gouda
+B.Tech – Computer Science & Engineering
 
+## ⭐ Support
+If you like this project:
+- ⭐ Star the repository
 
 
