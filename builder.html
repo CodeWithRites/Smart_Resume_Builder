@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resume Builder</title>
+<link rel="stylesheet" href="builder.css">
+</head>
+<body>
+
+<header class="builder-header">
+    <h2>Smart Resume Builder</h2>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+</header>
+
+<div class="builder-container">
+
+    <!-- FORM -->
+    <div class="form-card">
+        <h3>Enter Details</h3>
+
+        <input id="name" placeholder="Full Name">
+        <input id="email" placeholder="Email">
+        <input id="phone" placeholder="Phone">
+        <input id="location" placeholder="Location">
+
+        <label>Profile Photo</label>
+        <input type="file" accept="image/*" onchange="loadPhoto(event)">
+
+        <textarea id="about" placeholder="About Me"></textarea>
+
+        <h4>Education</h4>
+        <input id="tenthSchool" placeholder="10th School Name">
+        <input id="tenthMarks" placeholder="10th Marks / Percentage">
+        <input id="twelfthSchool" placeholder="12th School Name">
+        <input id="twelfthMarks" placeholder="12th Marks / Percentage">
+
+        <div id="extraEducation"></div>
+        <button class="add-btn" onclick="addEducation()">➕ Add Higher Education</button>
+
+        <textarea id="projects" placeholder="Project | Description | Link"></textarea>
+        <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+        <textarea id="languages" placeholder="Languages (comma separated)"></textarea>
+
+        <h4>Choose Template</h4>
+        <div class="template-switch">
+            <button onclick="setTemplate('template-classic')">Classic</button>
+            <button onclick="setTemplate('template-modern')">Modern</button>
+            <button onclick="setTemplate('template-dark')">Dark</button>
+        </div>
+
+        <button class="generate-btn" onclick="generateResume()">Generate Resume</button>
+    </div>
+
+
+
+
+    <!-- PREVIEW -->
+    <div class="resume-page template-classic" id="resume">
+        <div class="resume-header">
+            <div>
+                <h1 id="rName">YOUR NAME</h1>
+                <p id="rContact"></p>
+            </div>
+            <img id="resumePhoto">
+        </div>
+
+        <div class="resume-body">
+            <div class="left-column">
+                <h4>Education</h4>
+                <div id="rEducation"></div>
+
+                <h4>Skills</h4>
+                <ul id="rSkills"></ul>
+
+                <h4>Languages</h4>
+                <ul id="rLanguages"></ul>
+            </div>
+
+            <div class="right-column">
+                <h4>About</h4>
+                <p id="rAbout"></p>
+
+                <h4>Projects</h4>
+                <div id="rProjects"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="download-section">
+    <button class="download-btn" onclick="openDownloadOptions()">⬇ Download Resume</button>
+</div>
+
+
+
+<!-- DOWNLOAD MODAL -->
+<div id="downloadModal" class="download-modal">
+    <div class="download-box">
+        <h3>Download Resume</h3>
+
+        <div class="format-options">
+            <div onclick="downloadResume('png')">🖼 PNG</div>
+            <div onclick="downloadResume('jpg')">📸 JPG</div>
+            <div onclick="downloadResume('pdf')">📄 PDF</div>
+        </div>
+
+        <button onclick="closeDownloadOptions()">Cancel</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg,#e0e7ff,#f8fafc);
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+.builder-header {
+    background: rgba(31,41,55,0.85);
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.builder-header h2 {
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+    color: #1f2933;
+}
+
+/* ================= LAYOUT ================= */
+.builder-container {
+    display: flex;
+    gap: 28px;
+    padding: 32px;
+}
+
+/* ================= FORM ================= */
+.form-card {
+    width: 32%;
+    background: rgba(255,255,255,0.95);
+    padding: 26px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+.form-card h3 {
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+.form-card h4 {
+    margin: 16px 0 8px;
+    font-size: 14px;
+    color: #1f2933;
+}
+
+.form-card input,
+.form-card textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 11px 12px;
+    font-size: 13.5px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+}
+
+.form-card textarea {
+    resize: none;
+}
+
+/* ================= BUTTONS ================= */
+.add-btn {
+    width: 100%;
+    padding: 10px;
+    background: #eef2ff;
+    border: 2px dashed #6366f1;
+    color: #4338ca;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg,#4f46e5,#06b6d4);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(79,70,229,0.45);
+}
+
+/* ================= TEMPLATE SWITCH ================= */
+.template-switch {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.template-switch button {
+    flex: 1;
+    padding: 9px;
+    border-radius: 10px;
+    border: none;
+    background: #e0e7ff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.template-switch button:hover {
+    background: #6366f1;
+    color: white;
+}
+
+/* ================= RESUME PREVIEW ================= */
+.resume-page {
+    width: 68%;
+    background: white;
+    padding: 36px;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #6366f1;
+    padding-bottom: 14px;
+}
+
+.resume-header h1 {
+    font-size: 28px;
+    color: #1f2933;
+}
+
+.resume-header p {
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.resume-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6366f1;
+}
+
+/* ================= BODY ================= */
+.resume-body {
+    display: flex;
+    gap: 26px;
+    margin-top: 26px;
+}
+
+.left-column {
+    width: 35%;
+    border-right: 2px solid #e5e7eb;
+    padding-right: 20px;
+}
+
+.right-column {
+    width: 65%;
+    padding-left: 20px;
+}
+
+.resume-body h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #4f46e5;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.resume-body p,
+.resume-body li {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+/* ================= PROJECT CARD ================= */
+.project-card {
+    background: #f9fafb;
+    padding: 14px 16px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    border-left: 4px solid #6366f1;
+}
+
+/* ================= DOWNLOAD ================= */
+.download-section {
+    text-align: center;
+    margin: 26px 0;
+}
+
+.download-btn {
+    padding: 16px 40px;
+    font-size: 16px;
+    border-radius: 40px;
+    background: linear-gradient(135deg,#111827,#374151);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ================= DOWNLOAD MODAL ================= */
+.download-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.download-box {
+    background: white;
+    padding: 26px;
+    border-radius: 18px;
+    width: 300px;
+    text-align: center;
+}
+
+.format-options {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.format-options div {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+}
+/* ================= TEMPLATE 1: CLASSIC ================= */
+.template-classic {
+    background: #ffffff;
+    color: #1f2937;
+}
+
+.template-classic .resume-header {
+    border-bottom: 3px solid #2563eb;
+}
+
+.template-classic .resume-header h1 {
+    color: #2563eb;
+}
+
+.template-classic .resume-header img {
+    border: 3px solid #2563eb;
+}
+
+.template-classic .left-column {
+    border-right: 2px solid #2563eb;
+}
+
+.template-classic h4 {
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 6px;
+}
+
+
+/* ================= TEMPLATE 2: MODERN ================= */
+.template-modern {
+    background: linear-gradient(135deg,#f8fafc,#eef2ff);
+}
+
+/* Header as card */
+.template-modern .resume-header {
+    background: linear-gradient(135deg,#6366f1,#06b6d4);
+    padding: 22px;
+    border-radius: 18px;
+    border-bottom: none;
+}
+
+.template-modern .resume-header h1,
+.template-modern .resume-header p {
+    color: white;
+}
+
+.template-modern .resume-header img {
+    border: 4px solid white;
+    box-shadow: 0 0 0 6px rgba(255,255,255,0.25);
+}
+
+/* Sidebar card */
+.template-modern .left-column {
+    background: white;
+    border-radius: 16px;
+    padding: 18px;
+    border-right: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.template-modern .right-column {
+    padding-left: 18px;
+}
+
+/* Headings */
+.template-modern h4 {
+    color: #6366f1;
+    border-left: 4px solid #06b6d4;
+    padding-left: 8px;
+}
+
+/* Projects as cards */
+.template-modern .project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+/* ================= TEMPLATE 3: DARK ================= */
+.template-dark {
+    background: #020617;
+    color: #e5e7eb;
+}
+
+/* Header */
+.template-dark .resume-header {
+    border-bottom: 2px solid #38bdf8;
+}
+
+.template-dark .resume-header h1 {
+    color: #f8fafc;
+    letter-spacing: 0.5px;
+}
+
+.template-dark .resume-header p {
+    color: #94a3b8;
+}
+
+.template-dark .resume-header img {
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 0 6px rgba(56,189,248,0.15);
+}
+
+/* Sidebar */
+.template-dark .left-column {
+    background: #020617;
+    border-right: 1px solid #1e293b;
+}
+
+/* Headings */
+.template-dark h4 {
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+/* Projects */
+.template-dark .project-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-left: 4px solid #38bdf8;
+    border-radius: 10px;
+    padding: 14px;
+    transition: 0.25s;
+}
+
+.template-dark .project-card:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+}
+
+/* Bullet style */
+.template-dark ul li::before {
+    content: "▸";
+    color: #38bdf8;
+    margin-right: 6px;
+}
+.format-options div {
+    padding: 14px;
+    border-radius: 12px;
+    background: #f4f7ff;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.25s ease;
+    cursor: pointer;   /* ✅ IMPORTANT */
+}
+
+.format-options div:hover {
+    background: linear-gradient(135deg,#4fc3f7,#00bcd4);
+    color: white;
+    transform: translateY(-4px);
+}
+
+
